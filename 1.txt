@@ -1,0 +1,36 @@
+n = input()
+output = 0
+letters = list(n)
+letters_num = len(letters)
+
+for i in range(letters_num):
+    if letters[i] == "I":
+        output += 1
+    if letters[i] == "V":
+        output += 5
+    if letters[i] == "X":
+        output += 10
+    if letters[i] == "L":
+        output += 50
+    if letters[i] == "C":
+        output += 100
+    if letters[i] == "D":
+        output += 500
+    if letters[i] == "M":
+        output += 1000
+        
+for i in range(letters_num - 1):
+    if letters[i] == "I" and letters[i + 1] == "V":
+        output -= 2
+    if letters[i] == "I" and letters[i + 1] == "X":
+        output -= 2    
+    if letters[i] == "X" and letters[i + 1] == "L":
+        output -= 20     
+    if letters[i] == "X" and letters[i + 1] == "C":
+        output -= 20
+    if letters[i] == "C" and letters[i + 1] == "D":
+        output -= 200 
+    if letters[i] == "C" and letters[i + 1] == "M":
+        output -= 200
+        
+print(output)
