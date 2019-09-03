@@ -1,0 +1,12 @@
+n = input()
+array = n.split(",")
+array = [int(e) for e in array]
+array.sort()
+count = 0
+
+for i in range(len(array)):
+    if array[i] != count:
+        print(count)
+        count += 2
+    else:
+        count += 1
