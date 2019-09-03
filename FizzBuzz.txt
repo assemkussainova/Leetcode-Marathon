@@ -1,0 +1,15 @@
+n = int(input())
+array = []
+i = 0
+while i < n:
+    i = i + 1
+    array.append(i)
+    
+for e in range(len(array)):
+    if array[e] % 3 == 0 and array[e] % 5 == 0:
+        array[e] = "FizzBuzz"
+    elif array[e] % 3 == 0:    
+        array[e] = "Fizz"
+    elif array[e] % 5 == 0:
+        array[e] = "Buzz"
+print(array)
