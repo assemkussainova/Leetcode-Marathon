@@ -1,0 +1,16 @@
+print("Head = ")
+head = input()
+
+print("Node = ")
+node = int(input())
+
+array = head.split(",")
+array = [int(e) for e in array]
+
+def DelNode(a, n):
+    for i in a:
+        if i == node:
+            a.remove(i)            
+    print(array)
+    
+DelNode(array, node)
