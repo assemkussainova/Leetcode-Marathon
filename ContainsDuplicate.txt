@@ -1,0 +1,17 @@
+n = input()
+count = 0
+
+def checkDublicates(num, r):
+    array = num.split(",")
+    array = [int(e) for e in array]
+    array.sort()
+
+    for i in range(len(array)-1):
+        if array[i] == array[i+1]:
+            r += 1
+    if r > 0:
+        print("True")
+    else:
+        print("False")
+        
+checkDublicates(n, count)
