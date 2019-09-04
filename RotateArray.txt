@@ -1,0 +1,15 @@
+print("Enter numbers:")
+n = input()
+print("k = ")
+k = int(input())
+count = 0
+
+array = n.split(",")
+array = [int(e) for e in array]
+length = len(array)-1
+
+while count < k:
+    temp = array.pop(length)
+    array.insert(0, temp) 
+    count += 1
+print(array)
