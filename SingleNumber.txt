@@ -1,0 +1,16 @@
+n = input()
+num = 0
+
+array = n.split(",")
+array = [int(e) for e in array]
+array.sort()
+
+if array[0] != array[1]:
+    num = array[0]
+for i in range(1, len(array)-2):
+    if array[i] != array[i+1] and array[i] != array[i-1]:
+        num = array[i]
+if array[len(array)-1] != array[i-1]:
+    num = array[len(array)-1]
+        
+print(num)
