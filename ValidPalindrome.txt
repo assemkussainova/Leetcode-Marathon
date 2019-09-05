@@ -1,0 +1,17 @@
+n = input()
+rev =[]
+
+array = list(n.lower())
+if n == '':
+    print("True")
+for i in array:
+    if i.isspace() == True:
+        array.remove(i)
+    if i.isalpha() == False:
+        array.remove(i)
+for i in reversed(array):
+    rev.append(i)
+if array == rev:
+    print("True")
+else:
+    print("False")
