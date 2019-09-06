@@ -1,0 +1,7 @@
+n = input()
+array = n.split(",")
+array = [str(e) for e in array]
+num = int("".join(array))
+num += 1
+out = [int(i) for i in str(num)]
+print(out)
