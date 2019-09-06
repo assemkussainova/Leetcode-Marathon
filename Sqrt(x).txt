@@ -1,0 +1,7 @@
+n = int(input())
+
+def root(i):
+    r = n ** (1/2)
+    print(int(r))
+
+root(n)
