@@ -1,0 +1,53 @@
+queue = []
+print("Enter commands in one line (ex. push 5 pop push 7): ")
+inp = input().split(" ")
+
+def push(s, n):
+    s.append(n)
+    print("ok")
+
+def pop(s):
+    if len(s) > 1:
+        for i in range(len(s)-1):
+            print(s[0])
+            s.remove(s[0])
+            break
+    elif len(s) == 1:
+        for i in s:
+            print(i)
+            s.remove(i)
+            break
+    elif len(s) == 0:
+        print("error")
+
+def front(s):
+    if len(s) > 1:
+        for i in range(len(s)-1):
+            print(s[0])
+            break
+    elif len(s) == 1:
+        for i in s:
+            print(i)
+            break
+    else:
+        print("error")
+        
+def size(s):
+    print(len(s))
+    
+def clear(s):
+    while len(s) > 0:
+        for i in s:
+            s.remove(i)
+    print("ok")
+    
+def exit():
+    print("bye")
+    
+for i in range(len(inp)):
+    if inp[i] == "push": push(queue, inp[i+1])
+    elif inp[i] == "pop": pop(queue)
+    elif inp[i] == "front": front(queue)
+    elif inp[i] == "size": size(queue)
+    elif inp[i] == "clear": clear(queue)
+    elif inp[i] == "exit": exit()
