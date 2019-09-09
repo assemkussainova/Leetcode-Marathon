@@ -1,0 +1,15 @@
+n = input()
+count = 0
+
+array = [int(e) for e in str(n)]
+length = len(array)
+
+new = []
+for i in range(length):
+    new.append(array[length-1])
+    length = length-1
+for i in range(len(new)):
+    if new[0] == 0:
+        new.remove(new[0])
+for i in range(len(new)):
+    print(new[i], end = "")
