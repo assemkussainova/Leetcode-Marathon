@@ -1,0 +1,9 @@
+n = input()
+rev = []
+array = list(n)
+for i in reversed(array):
+    rev.append(i)
+if array == rev:
+    print("True")
+else:
+    print("False")
