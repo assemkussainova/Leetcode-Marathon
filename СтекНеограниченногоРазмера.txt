@@ -1,0 +1,53 @@
+stack = []
+print("Enter commands in one line (ex. push 5 pop push 7): ")
+inp = input().split(" ")
+
+def push(s, n):
+    stack.append(n)
+    print("ok")
+
+def pop(s):
+    if len(s) > 1:
+        for i in range(len(s)-1):
+            print(s[len(s)-1])
+            s.remove(s[len(s)-1])
+            break
+    elif len(s) == 1:
+        for i in s:
+            print(i)
+            s.remove(i)
+            break
+    elif len(s) == 0:
+        print("error")
+
+def back(s):
+    if len(s) > 1:
+        for i in range(len(s)-1):
+            print(s[len(s)-1])
+            break
+    elif len(s) == 1:
+        for i in s:
+            print(i)
+            break
+    else:
+        print("error")
+        
+def size(s):
+    print(len(s))
+    
+def clear(s):
+    while len(s) > 0:
+        for i in s:
+            s.remove(i)
+    print("ok")
+    
+def exit():
+    print("bye")
+    
+for i in range(len(inp)):
+    if inp[i] == "push": push(stack, inp[i+1])
+    elif inp[i] == "pop": pop(stack)
+    elif inp[i] == "back": back(stack)
+    elif inp[i] == "size": size(stack)
+    elif inp[i] == "clear": clear(stack)
+    elif inp[i] == "exit": exit()
