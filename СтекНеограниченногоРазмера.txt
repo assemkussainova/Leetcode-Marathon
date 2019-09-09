@@ -3,7 +3,7 @@ print("Enter commands in one line (ex. push 5 pop push 7): ")
 inp = input().split(" ")
 
 def push(s, n):
-    stack.append(n)
+    s.append(n)
     print("ok")
 
 def pop(s):
