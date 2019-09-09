@@ -1,4 +1,5 @@
 n = input()
+
 array = n.split(" ")
 array = [str(e) for e in array]
 length = len(array)-1
