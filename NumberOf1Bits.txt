@@ -1,0 +1,9 @@
+n = input()
+array = list(n)
+length = len(array)
+count = 0
+
+for i in range(length):
+    if int(array[i]) == 1:
+        count += 1
+print(count)
